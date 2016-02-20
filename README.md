@@ -1,2 +1,5 @@
 # Configurations
-Configurations for things I frequently use
+Configurations for software I use across different machines, like vim and tmux.
+
+:D
+
