@@ -1,7 +1,12 @@
+set noswapfile
+set cursorline
+hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white
+set cursorcolumn
 set number
 syntax enable
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 if has('mouse')
   set mouse=a
@@ -74,3 +79,11 @@ function! HasPaste()
   endif
      return ''
 endfunction
+
+" Ctrl-p
+let g:ctrlp_custom_ignore = 'node_modules/|\.DS_Store/|\.git/|vendor/|tmp/'
+let g:ctrlp_max_files = 0
+let g:ctrlp_use_caching = 0
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:25,results:50'
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g "" --ignore node_modules --ignore .DS_Store --ignore .git --ignore vendor --ignore tmp'
+let g:ctrlp_working_path_mode = 'a'
